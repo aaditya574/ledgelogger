@@ -51,6 +51,9 @@ app.use('/vendors', delay, auth, vendorsRoutes);
 */
 
 // Routes
+app.get('/', (req, res) => {
+    res.send('Hello!');
+})
 app.use('/auth', authRoutes);
 app.use('/buyers', auth, buyersRoutes);
 app.use('/items', auth, itemsRoutes);
